@@ -1,11 +1,19 @@
 @media (max-width: 768px) {
 
-    .sidebar {
-        transform: translate(-250px, 0);
+    .wrapper {
+        padding: 20px;
     }
 
-    .active-header {
-        transform: translate(0, 0);
+    .sidebar {
+        transform: translate(-250px, 0);
+
+        &--active {
+            transform: translate(0, 0);
+        }
+
+        &__btn {
+            display: block;
+        }
     }
 
     .about {
@@ -27,11 +35,16 @@
     }
 
     .project {
-        grid-auto-rows: 1fr;
+        display: block;
 
         &__item {
             grid-template: 200px auto auto / 1fr;
             grid-template-areas: "thumbnail""description""btn";
+            padding-bottom: 40px;
+            
+            &:last-of-type {
+                padding-bottom: 0;
+            }
         }
     }
 }

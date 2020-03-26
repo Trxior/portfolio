@@ -17,13 +17,13 @@
         <nav class="sidebar__navigation navigation">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="" class="navigation__link">O mnie</a>
+                    <a href="#about" class="navigation__link">O mnie</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="" class="navigation__link">Technologie</a>
+                    <a href="#technologies" class="navigation__link">Technologie</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="" class="navigation__link">Projekty</a>
+                    <a href="#project" class="navigation__link">Projekty</a>
                 </li>
             </ul>
         </nav>
@@ -39,11 +39,11 @@
             </div>
         </div>
 
-        <button class="sidebar__btn"><i id="sidebar-btn" class="fas fa-bars"></i></button>
+        <button class="sidebar__btn toggleMenu"><i id="sidebar-btn" class="fas fa-bars"></i></button>
     </section>
 
     <main class="portfolio">
-        <section class="wrapper">
+        <section class="wrapper" id="about">
             <header class="about__header">
                 <div class="about__pfp">
                     <img src="./img/avatar.jpg" class="about__image">
@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <section class="wrapper">
+        <section class="wrapper" id="technologies">
             <div class="wrapper__box">
                 <h2 class="wrapper__title">Technologie</h2>
                 <p class="wrapper__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro vel atque eum adipisci quaerat molestias temporibus velit quisquam officiis, unde voluptates nobis odit nemo ex suscipit nostrum veniam sequi inventore voluptatibus incidunt doloribus, molestiae officia magni ipsam. Ratione commodi, impedit.</p>
@@ -100,7 +100,7 @@
             </div>
         </section>
 
-        <section class="wrapper">
+        <section class="wrapper" id="project">
             <div class="wrapper__box">
                 <h2 class="wrapper__title">Projekty</h2>
                 <p class="wrapper__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro vel atque eum adipisci quaerat molestias temporibus velit quisquam officiis, unde voluptates nobis odit nemo ex suscipit nostrum veniam sequi inventore voluptatibus incidunt doloribus, molestiae officia magni ipsam. Ratione commodi, impedit.</p>
@@ -112,8 +112,12 @@
                     </div>
                     <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error laudantium fugiat nihil distinctio natus dolorem dicta iure ea beatae aperiam corporis facere, molestias a quod provident, assumenda minima nulla!</p>
                     <div class="project__btn-group">
-                        <i class="devicon-github-plain"></i>
-                        <i class="far fa-eye"></i>
+                        <a href="https://github.com/Trxior/hotel-web">
+                            <i class="devicon-github-plain"></i>
+                        </a>
+                        <a href="https://trxior.github.io/hotel-web/">
+                            <i class="far fa-eye"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="project__item">
@@ -122,8 +126,12 @@
                     </div>
                     <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit blanditiis aliquid a, corporis eligendi quia. Repellat quidem asperiores aliquam repudiandae laboriosam cupiditate suscipit beatae, quisquam perferendis ratione! Fugiat, aperiam, eveniet.</p>
                     <div class="project__btn-group">
-                        <i class="devicon-github-plain"></i>
-                        <i class="far fa-eye"></i>
+                        <a href="https://github.com/Trxior/portfolio">
+                            <i class="devicon-github-plain"></i>
+                        </a>
+                        <a href="https://trxior.github.io/portfolio/">
+                            <i class="far fa-eye"></i>
+                        </a>
                     </div>
                 </div>
             </div>
