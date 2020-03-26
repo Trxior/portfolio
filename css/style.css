@@ -86,10 +86,10 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 840px;
   margin: 0 auto;
-  padding: 40px 20px; }
+  padding: 40px 20px;
+  max-width: 840px;
+  min-height: 100vh; }
   .wrapper__title {
     font-size: 24px;
     text-transform: uppercase; }
@@ -111,7 +111,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 2px;
+  border: solid 2px #FFFFFF;
   padding: 40px; }
 
 .about__pfp {
@@ -159,7 +159,7 @@ a {
       object-fit: cover; }
 
 .project {
-  grid-auto-rows: 250px; }
+  grid-auto-rows: 230px; }
   .project__item {
     display: grid;
     grid-template: auto 1fr / 1fr 1fr;
@@ -167,17 +167,17 @@ a {
     grid-gap: 20px; }
   .project__thumbnail {
     grid-area: thumbnail;
-    border: solid 1px white;
+    border: solid 2px #FFFFFF;
     overflow: hidden; }
     .project__thumbnail img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-      transform: scale(1.25);
+      transform: scale(1.05);
       transition: .5s; }
       .project__thumbnail img:hover {
-        transform: scale(1.1); }
+        transform: scale(1); }
   .project__description {
     grid-area: description; }
   .project__btn-group {
