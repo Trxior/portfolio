@@ -10,7 +10,7 @@
     max-height: 100vh;
     padding: 20px 10px;
     background: $dark-blue;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 4px rgba(21, 21, 21, .25);
     text-transform: uppercase;
     text-align: center;
     z-index: 5;
@@ -27,7 +27,7 @@
         top: 10px;
         position: absolute;
         background: $white;
-        box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+        box-shadow: 0 0 4px rgba(21, 21, 21, .25);
         height: 50px;
         width: 50px;
         border: none;
@@ -46,7 +46,7 @@
 
     &__link {
         background: $blue;
-        box-shadow: 0 0 2px rgba(21, 21, 21, .25);
+        box-shadow: 0 0 4px rgba(21, 21, 21, .25);
         border-radius: 2px;
         padding: 6px 10px;
         transition: .5s;
@@ -63,6 +63,7 @@
 
     &__title {
         font-size: 16px;
+        font-weight: 600;
     }
 
     &__data {

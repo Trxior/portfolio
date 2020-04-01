@@ -3,16 +3,17 @@
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-gap: 60px;
+    align-content: center;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
     max-width: 840px;
     min-height: 100vh;
 
     &__title {
-        font-size: 24px;
+        font-size: 26px;
+        font-weight: 700;
         text-transform: uppercase;
     }
 
@@ -22,53 +23,44 @@
 }
 
 .about {
+    margin: 0 auto;
+    max-width: 840px;
+    display: grid;
+    grid-gap: 40px;
+
     &__header {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        grid-gap: 40px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .25);
-        text-shadow: 0 0 10px rgba(0, 0, 0, .5);
-        margin-bottom: 40px;
-        width: 100%;
-        background:
-            linear-gradient(rgba(19, 28, 37, .75),
-                rgba(19, 28, 37, .75)),
-            url('../img/forest.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border: solid 2px $white;
-        padding: 40px;
-    }
-
-    &__pfp {
-        margin: 0 auto;
-        max-height: 200px;
-        max-width: 200px;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-        overflow: hidden;
-    }
-
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-top: -50px;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
     &__title {
-        font-size: 40px;
-        font-weight: 900;
+        font-size: 64px;
+        line-height: 1em;
+        position: relative;
+        display: inline-block;
+        padding: 0 20px 0 0;
+
+        &:before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            border: dashed 4px $orange;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+
+            &:hover {
+                border: solid 2px $orange;
+            }
+        }
     }
 
     &__description {
         color: $orange;
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.25em;
     }
 }
 
@@ -76,7 +68,29 @@
     display: grid;
     grid-gap: 40px;
     justify-content: center;
-    margin-top: 40px;
+}
+
+#about {
+    position: relative;
+    overflow: hidden;
+    
+    &:before {
+        position: absolute;
+        content: '';
+        background: url('data:image/svg+xml;headers=Content-Disposition%3A%20attachment%3B%20filename=pattern.b64;base64,PHN2ZyB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTQwMCA3MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOmZpPSJodHRwOi8vcGF0dGVybi5mbGF0aWNvbi5jb20vIj48cmVjdCB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iMCIgZmlsbD0iI2ZmZmZmZiIvPjxkZWZzPjxwYXRoIGQ9Ik0yNTYsMEMxMTQuODM3LDAsMCwxMTQuODM3LDAsMjU2czExNC44MzcsMjU2LDI1NiwyNTZzMjU2LTExNC44MzcsMjU2LTI1NlMzOTcuMTYzLDAsMjU2LDB6IiB0cmFuc2Zvcm09Im1hdHJpeCgtMC4xMTcxODc1IDAgMCAwLjExNzE4NzUgMTg3IDE3NikiIGlkPSJMMV8wIiBmaWxsPSIjZWQ0MTJiIi8+PC9kZWZzPjxnIGZpOmNsYXNzPSJLVXNlUGF0dGVybiI+PHBhdHRlcm4gaWQ9InBhdHRlcm5fTDFfMCIgd2lkdGg9IjM1MCIgaGVpZ2h0PSIzNTAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjx1c2UgeGxpbms6aHJlZj0iI0wxXzAiIHg9Ii0zNTAiIHk9Ii0zNTAiLz48dXNlIHhsaW5rOmhyZWY9IiNMMV8wIiB4PSIwIiB5PSItMzUwIi8+PHVzZSB4bGluazpocmVmPSIjTDFfMCIgeD0iMzUwIiB5PSItMzUwIi8+PHVzZSB4bGluazpocmVmPSIjTDFfMCIgeD0iLTM1MCIgeT0iMCIvPjx1c2UgeGxpbms6aHJlZj0iI0wxXzAiIHg9IjAiIHk9IjAiLz48dXNlIHhsaW5rOmhyZWY9IiNMMV8wIiB4PSIzNTAiIHk9IjAiLz48dXNlIHhsaW5rOmhyZWY9IiNMMV8wIiB4PSItMzUwIiB5PSIzNTAiLz48dXNlIHhsaW5rOmhyZWY9IiNMMV8wIiB4PSIwIiB5PSIzNTAiLz48dXNlIHhsaW5rOmhyZWY9IiNMMV8wIiB4PSIzNTAiIHk9IjM1MCIvPjwvcGF0dGVybj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fTDFfMCkiLz48L2c+PC9zdmc+');
+        background-size: 75px;
+        top: 25vh;
+        right: -10vh;
+        width: 20vh;
+        height: 20vh;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+}
+
+#technologies {
+    background: $white;
+    color: $blue;
 }
 
 .technologies {

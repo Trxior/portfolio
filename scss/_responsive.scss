@@ -1,9 +1,5 @@
 @media (max-width: 768px) {
 
-    .wrapper {
-        padding: 20px;
-    }
-
     .sidebar {
         transform: translate(-250px, 0);
 
@@ -22,7 +18,11 @@
         }
 
         &__title {
-            font-size: 32px;
+            font-size: 36px;
+        }
+
+        &__description {
+            font-size: 24px;
         }
     }
 
